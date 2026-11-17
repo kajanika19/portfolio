@@ -2,6 +2,8 @@
 
 Personal portfolio website for **Kajanika Pulenthiraraj** ([@kajanika19](https://github.com/kajanika19)), an IT undergraduate at the University of Moratuwa, Sri Lanka.
 
+Live site: [kajanika19.github.io/portfolio](https://kajanika19.github.io/portfolio/)
+
 Built with **React + Vite** and plain modern CSS. There's no UI framework and no icon package to install: the icons are Lucide icons inlined in `src/components/Icon.jsx`.
 
 ---
