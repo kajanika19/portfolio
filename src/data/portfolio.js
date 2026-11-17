@@ -15,8 +15,7 @@ export const profile = {
   heroIntro:
     'I love turning ideas into clean, friendly digital experiences, where solid code and thoughtful design work together.',
   location: 'Sri Lanka',
-  // TODO: replace with your real email address.
-  email: 'your.email@example.com',
+  email: 'kajanikapulenthiraraj@gmail.com',
 };
 
 export const socials = {

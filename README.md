@@ -77,7 +77,7 @@ Almost everything you'll want to change is in **`src/data/portfolio.js`**:
 
 | What | Where in `portfolio.js` |
 | --- | --- |
-| **Your email** (placeholder right now) | `profile.email` |
+| **Your public contact email** | `profile.email` |
 | Hero intro text | `profile.heroIntro` |
 | About me paragraphs and quick facts | `about` |
 | Skills (add a short note to any skill with `note: '...'`) | `skillGroups` |
@@ -87,7 +87,6 @@ Almost everything you'll want to change is in **`src/data/portfolio.js`**:
 
 Items marked `TODO` in that file are placeholders waiting for your details:
 
-- **Email**: replace `your.email@example.com`.
 - **Company Group Project**: replace the placeholder description when you can share more.
 - **Personal Portfolio project link**: once this site has its own GitHub repo, set the link to that repo URL.
 
