@@ -1,0 +1,35 @@
+.section-heading {
+  margin-bottom: clamp(2.25rem, 5vw, 3.5rem);
+  max-width: 640px;
+}
+
+.section-heading--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-heading__title {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+/* The signature four-colour spectrum bar used under every heading */
+.section-heading__spectrum {
+  display: block;
+  width: 88px;
+  height: 6px;
+  margin-top: 1rem;
+  border-radius: 99px;
+  background: var(--grad-full);
+}
+
+.section-heading--center .section-heading__spectrum {
+  margin-inline: auto;
+}
+
+.section-heading__lede {
+  margin-top: 1.1rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}

@@ -1,0 +1,138 @@
+/* Bento layout: Programming and Frontend lead, Mobile and Tools follow */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.skill-group--programming { grid-column: span 7; }
+.skill-group--frontend    { grid-column: span 5; }
+.skill-group--mobile      { grid-column: span 5; }
+.skill-group--tools       { grid-column: span 7; }
+
+.skill-group {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border-radius: var(--r-card);
+  transition:
+    transform 0.35s var(--ease),
+    border-color 0.35s var(--ease),
+    opacity 0.8s var(--ease);
+}
+
+/* Coloured light in the corner of each card */
+.skill-group::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--accent);
+  filter: blur(70px);
+  opacity: 0.28;
+  transition: opacity 0.35s var(--ease);
+  pointer-events: none;
+}
+
+.skill-group:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.skill-group:hover::before {
+  opacity: 0.45;
+}
+
+.skill-group__head {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.skill-group__icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  color: #fff;
+  background: var(--accent);
+  box-shadow: 0 10px 24px -10px var(--accent);
+}
+
+.skill-group__title {
+  font-size: 1.45rem;
+}
+
+.skill-group__desc {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.skill-group__list {
+  position: relative;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1.05rem;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.skill .icon {
+  color: var(--accent-soft);
+}
+
+.skill:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* A skill with a note (e.g. Java: strongest language) is larger */
+.skill--noted {
+  padding: 0.75rem 0.75rem 0.75rem 1.15rem;
+  font-size: 1.12rem;
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.skill__note {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--r-pill);
+  background: var(--accent);
+  color: #fff;
+}
+
+@media (max-width: 860px) {
+  .skill-group--programming,
+  .skill-group--frontend,
+  .skill-group--mobile,
+  .skill-group--tools {
+    grid-column: span 12;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 860px) {
+  .skill-group--mobile,
+  .skill-group--tools {
+    grid-column: span 6;
+  }
+}

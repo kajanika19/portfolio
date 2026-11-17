@@ -1,0 +1,75 @@
+.education {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.edu-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: var(--r-card);
+  overflow: hidden;
+}
+
+/* Gradient edge on the left of the card */
+.edu-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(180deg, var(--indigo), var(--cyan), var(--teal));
+}
+
+.edu-card__icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 76px;
+  height: 76px;
+  border-radius: 22px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--indigo), var(--cyan));
+  box-shadow: 0 16px 34px -14px rgba(6, 182, 212, 0.8);
+}
+
+.edu-card__school {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  letter-spacing: -0.03em;
+}
+
+.edu-card__degree {
+  margin-top: 0.35rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.edu-card__meta {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.edu-card__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+@media (max-width: 560px) {
+  .edu-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .edu-card__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+  }
+}
